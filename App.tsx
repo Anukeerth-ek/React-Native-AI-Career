@@ -1,6 +1,6 @@
 import { StatusBar } from "expo-status-bar";
 import { NativeWindStyleSheet, styled } from "nativewind";
-import { View as RNView } from "react-native";
+import { View as RNView, ScrollView } from "react-native";
 import HomeScreen from "./screens/HomeScreen";
 import HomepageCard from "./components/HomepageCards";
 import BottomTabs from "./navigations/BottomTabs";
@@ -18,10 +18,14 @@ export default function App() {
      return (
           <NavigationContainer>
                <View className="flex-1 bg-white">
+                    {/* <ScrollView> */}
+
                     <StatusBar style="auto" />
                     {/* <HomeScreen />
                     <HomepageCard /> */}
+                    
                     <BottomTabs />
+                    {/* </ScrollView> */}
                </View>
           </NavigationContainer>
      );

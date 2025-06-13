@@ -4,7 +4,7 @@ import Icon from "react-native-vector-icons/MaterialIcons";
 
 import HomeScreen from '../screens/HomeScreen';
 import ResumeScreen from '../components/ResumeScreen';
-import JobsScreen from '../components/CareerScreen';
+import CareerGuidance from '../components/CareerScreen';
 import SkillAnalysisScreen from '../components/SkillAnalysisScreen'
 
 const Tab = createBottomTabNavigator();
@@ -48,7 +48,7 @@ export default function BottomTabs() {
     >
       <Tab.Screen name="home" component={HomeScreen} />
       <Tab.Screen name="description" component={ResumeScreen} />
-      <Tab.Screen name="jobs" component={JobsScreen} />
+      <Tab.Screen name="jobs" component={CareerGuidance} />
       <Tab.Screen name="Profile" component={SkillAnalysisScreen} />
     </Tab.Navigator>
   );
