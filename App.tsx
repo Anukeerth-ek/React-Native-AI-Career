@@ -1,8 +1,13 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 import HomeScreen from './screens/HomeScreen';
+import { NativeWindStyleSheet } from "nativewind";
 
 export default function App() {
+
+NativeWindStyleSheet.setOutput({
+  default: "native",
+});
   return (
     <View style={styles.container}>
       {/* <Text>Open up App.tsx to start working on your app!</Text> */}
