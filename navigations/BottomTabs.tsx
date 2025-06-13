@@ -3,9 +3,9 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Icon from "react-native-vector-icons/MaterialIcons";
 
 import HomeScreen from '../screens/HomeScreen';
-// import ResumeScreen from '../screens/ResumeScreen';
-// import JobsScreen from '../screens/JobsScreen';
-// import ProfileScreen from '../screens/ProfileScreen';
+import ResumeScreen from '../components/ResumeScreen';
+import JobsScreen from '../components/CareerScreen';
+import SkillAnalysisScreen from '../components/SkillAnalysisScreen'
 
 const Tab = createBottomTabNavigator();
 
@@ -17,14 +17,14 @@ export default function BottomTabs() {
         tabBarIcon: ({ color, size }) => {
           let iconName;
           switch (route.name) {
-            case 'Home':
-              iconName = 'home-outline';
+            case 'home':
+              iconName = 'home';
               break;
-            case 'Resume':
-              iconName = 'document-text-outline';
+            case 'description':
+              iconName = 'description';
               break;
-            case 'Jobs':
-              iconName = 'briefcase-outline';
+            case 'jobs':
+              iconName = 'cases';
               break;
             case 'Profile':
               iconName = 'person-outline';
@@ -46,10 +46,10 @@ export default function BottomTabs() {
         },
       })}
     >
-      <Tab.Screen name="Home" component={HomeScreen} />
-      {/* <Tab.Screen name="Resume" component={ResumeScreen} />
-      <Tab.Screen name="Jobs" component={JobsScreen} />
-      <Tab.Screen name="Profile" component={ProfileScreen} /> */}
+      <Tab.Screen name="home" component={HomeScreen} />
+      <Tab.Screen name="description" component={ResumeScreen} />
+      <Tab.Screen name="jobs" component={JobsScreen} />
+      <Tab.Screen name="Profile" component={SkillAnalysisScreen} />
     </Tab.Navigator>
   );
 }
