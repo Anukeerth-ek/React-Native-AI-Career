@@ -1,27 +1,24 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { NativeWindStyleSheet, styled } from 'nativewind';
+import { View as RNView } from 'react-native';
 import HomeScreen from './screens/HomeScreen';
-import { NativeWindStyleSheet } from "nativewind";
+import HomepageCard from './components/HomepageCards';
+
+// 🪄 Wrap RN View using nativewind
+const View = styled(RNView);
+
+// ✅ NativeWind setup
+NativeWindStyleSheet.setOutput({
+  default: 'native',
+});
 
 export default function App() {
-
-NativeWindStyleSheet.setOutput({
-  default: "native",
-});
   return (
-    <View style={styles.container}>
-      {/* <Text>Open up App.tsx to start working on your app!</Text> */}
-      <HomeScreen/>
+    <View className="flex-1 bg-white">
+      <HomeScreen />
+      <HomepageCard />
       <StatusBar style="auto" />
     </View>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
