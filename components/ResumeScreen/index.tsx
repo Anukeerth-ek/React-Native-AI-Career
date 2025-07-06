@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { View, Text, TouchableOpacity as RNTouchableOpacity, ActivityIndicator as RNActivityIndicator, Alert } from "react-native";
-import DocumentPicker from "react-native-document-picker";
+// import DocumentPicker from "react-native-document-picker";
 import Icon from "react-native-vector-icons/MaterialIcons";
 import { styled } from "nativewind";
 
@@ -13,23 +13,24 @@ const ResumeReviewScreen = () => {
 const TouchableOpacity = styled(RNTouchableOpacity);
 const ActivityIndicator = styled(RNActivityIndicator)
   const handlePickDocument = async () => {
-    try {
-      setIsLoading(true);
-      const res = await DocumentPicker.pickSingle({
-        type: [DocumentPicker.types.pdf, DocumentPicker.types.plainText],
-      });
-      setResumeName(res.name);
-      // Simulate feedback delay
-      setTimeout(() => {
-        setIsLoading(false);
-        Alert.alert("Resume Uploaded", `You uploaded: ${res.name}`);
-      }, 1500);
-    } catch (err) {
-      if (!DocumentPicker.isCancel(err)) {
-        Alert.alert("Error", "Failed to pick a document.");
-      }
-      setIsLoading(false);
-    }
+    // try {
+    //   setIsLoading(true);
+    //   const res = await DocumentPicker.pickSingle({
+    //     type: [DocumentPicker.types.pdf, DocumentPicker.types.plainText],
+    //   });
+    //   setResumeName(res.name);
+    //   // Simulate feedback delay
+    //   setTimeout(() => {
+    //     setIsLoading(false);
+    //     Alert.alert("Resume Uploaded", `You uploaded: ${res.name}`);
+    //   }, 1500);
+    // } catch (err) {
+    //   if (!DocumentPicker.isCancel(err)) {
+    //     Alert.alert("Error", "Failed to pick a document.");
+    //   }
+    //   setIsLoading(false);
+    // }
+    return "hello"
   };
 
   return (
