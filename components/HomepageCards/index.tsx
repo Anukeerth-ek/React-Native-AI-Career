@@ -10,8 +10,8 @@ const View = styled(RNView);
 const Text = styled(RNText);
 export type BottomTabParamList = {
      home: undefined;
-     description: undefined;
-     jobs: undefined;
+     resume: undefined;
+     careers: undefined;
      Profile: undefined;
 };
 
@@ -27,13 +27,13 @@ const HomepageCard = () => {
                title: "Resume Reviewer",
                description: "Get instant AI feedback on your resume with actionable improvements",
                icon: "description",
-               route: "description",
+               route: "resume",
           },
           {
                title: "Career Guidance",
                description: "Discover personalized career paths based on your skills and interests",
                icon: "description",
-               route: "jobs",
+               route: "careers",
           },
           // {
           //      title: "Interview Prep",
