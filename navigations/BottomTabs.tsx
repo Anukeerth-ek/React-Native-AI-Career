@@ -20,10 +20,10 @@ export default function BottomTabs() {
             case 'home':
               iconName = 'home';
               break;
-            case 'description':
+            case 'resume':
               iconName = 'description';
               break;
-            case 'jobs':
+            case 'careers':
               iconName = 'cases';
               break;
             case 'Profile':
@@ -47,8 +47,8 @@ export default function BottomTabs() {
       })}
     >
       <Tab.Screen name="home" component={HomeScreen} />
-      <Tab.Screen name="description" component={ResumeScreen} />
-      <Tab.Screen name="jobs" component={CareerGuidance} />
+      <Tab.Screen name="resume" component={ResumeScreen} />
+      <Tab.Screen name="careers" component={CareerGuidance} />
       <Tab.Screen name="Profile" component={SkillAnalysisScreen} />
     </Tab.Navigator>
   );
