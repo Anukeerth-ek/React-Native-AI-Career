@@ -26,7 +26,7 @@ export default function BottomTabs() {
             case 'careers':
               iconName = 'cases';
               break;
-            case 'Profile':
+            case 'MockInterview':
               iconName = 'person-outline';
               break;
           }
@@ -48,8 +48,8 @@ export default function BottomTabs() {
     >
       <Tab.Screen name="home" component={HomeScreen} />
       <Tab.Screen name="resume" component={ResumeScreen} />
+      <Tab.Screen name="MockInterview" component={SkillAnalysisScreen} />
       <Tab.Screen name="careers" component={CareerGuidance} />
-      <Tab.Screen name="Profile" component={SkillAnalysisScreen} />
     </Tab.Navigator>
   );
 }

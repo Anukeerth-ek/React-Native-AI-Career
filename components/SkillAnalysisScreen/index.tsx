@@ -1,12 +1,12 @@
 import { View, Text } from 'react-native'
 import React from 'react'
 
-const SkillAnalysisScreen = () => {
+const MockInterview = () => {
   return (
     <View>
-      <Text>SkillAnalysisScreen</Text>
+      <Text>MockInterview</Text>
     </View>
   )
 }
 
-export default SkillAnalysisScreen
+export default MockInterview

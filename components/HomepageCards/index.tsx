@@ -12,7 +12,7 @@ export type BottomTabParamList = {
      home: undefined;
      resume: undefined;
      careers: undefined;
-     Profile: undefined;
+     MockInterview: undefined;
 };
 
 const HomepageCard = () => {
@@ -28,6 +28,12 @@ const HomepageCard = () => {
                description: "Get instant AI feedback on your resume with actionable improvements",
                icon: "description",
                route: "resume",
+               },
+          {
+               title: "Mock Interview",
+               description: "Identify skill gaps and get learning recommendations",
+               icon: "profile",
+               route: "MockInterview",
           },
           {
                title: "Career Guidance",
@@ -41,23 +47,18 @@ const HomepageCard = () => {
           //      icon: "description",
           //      route: "jobs",
           // },
-          {
-               title: "Skill Analysis",
-               description: "Identify skill gaps and get learning recommendations",
-               icon: "description",
-               route: "Profile",
-          },
+          
      ];
 
      return (
           <SafeArea className="px-2 gap-6 my-2">
-               {homeCardMockData?.map((item, index) => (
-                    <TouchableOpacity key={index} onPress={() => navigation.navigate(item.route)}>
-                         <View className="flex-row items-center bg-white p-4 rounded-3xl shadow-md" key={index}>
+               {homeCardMockData?.map((item) => (
+                    <TouchableOpacity key={item.title} onPress={() => navigation.navigate(item.route)}>
+                         <View className="flex-row items-center bg-white p-4 rounded-3xl shadow-md" >
                               <View className="bg-violet-600 p-3 rounded-xl mr-4">
                                    <Icon name="description" size={24} color="#ffffff" />
                               </View>
-                              <View className="">
+                              <View className="flex-1">
                                    <Text className="text-base font-semibold text-black">{item.title}</Text>
                                    <Text className="text-sm text-gray-500 mt-1">{item.description}</Text>
                               </View>
