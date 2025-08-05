@@ -5,7 +5,7 @@ import Icon from "react-native-vector-icons/MaterialIcons";
 import HomeScreen from '../screens/HomeScreen';
 import ResumeScreen from '../components/ResumeScreen';
 import CareerGuidance from '../components/CareerScreen';
-import SkillAnalysisScreen from '../components/SkillAnalysisScreen'
+import SkillAnalysisScreen from '../components/MockInterview'
 
 const Tab = createBottomTabNavigator();
 
