@@ -3,7 +3,7 @@
     "version": ">= 15.0.6",
     "appVersionSource": "remote",
     "requireCommit": "true"
-  }, 
+  },
   "build": {
     "preview": {
       "android": {
@@ -24,6 +24,10 @@
     "production": {
       "android": {
         "buildType": "app-bundle"
+      },
+      "node": "18.20.3",
+      "npm": {
+        "ci": false
       }
     }
   }
