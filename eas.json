@@ -1,7 +1,9 @@
 {
   "cli": {
-    "appVersionSource": "remote"
-  },
+    "version": ">= 15.0.6",
+    "appVersionSource": "remote",
+    "requireCommit": "true"
+  }, 
   "build": {
     "preview": {
       "android": {
