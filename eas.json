@@ -10,7 +10,13 @@
       "distribution": "internal"
     },
     "preview": {
-      "distribution": "internal"
+      "distribution": "internal",
+      "android": {
+        "buildType": "apk"
+      },
+      "env": {
+        "EXPO_USE_NPM_INSTALL": "true"
+      }
     },
     "production": {
       "autoIncrement": true,
